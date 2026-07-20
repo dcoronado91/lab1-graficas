@@ -18,7 +18,7 @@ Rellenar polígonos de más de 4 puntos (incluyendo cóncavos) y respetar un agu
 
 El polígono 5 está definido dentro del polígono 4 y se trata como un **agujero**: su interior nunca se pinta, aunque sí se dibuja su contorno.
 
-El resultado se guarda como [`out.png`](out.png) en la raíz del proyecto.
+El resultado se guarda como [`out.png`](out.png) y [`out.bmp`](out.bmp) en la raíz del proyecto.
 
 ## Algoritmo
 
@@ -42,8 +42,9 @@ Cada arista de cada polígono se dibuja con el algoritmo de línea de Bresenham,
 
 ```
 src/main.rs     # algoritmo de scanline fill + Bresenham + definición de los 5 polígonos
-Cargo.toml      # dependencia: image (solo buffer de píxeles + encoding PNG)
+Cargo.toml      # dependencia: image (solo buffer de píxeles + encoding PNG/BMP)
 out.png         # imagen generada, incluida en el repo
+out.bmp         # misma imagen en formato BMP, incluida en el repo
 ```
 
 ## Cómo correrlo
@@ -54,4 +55,4 @@ Requiere Rust y Cargo instalados ([rustup.rs](https://rustup.rs)).
 cargo run --release
 ```
 
-Esto genera/actualiza `out.png` en la raíz del proyecto.
+Esto genera/actualiza `out.png` y `out.bmp` en la raíz del proyecto.

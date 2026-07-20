@@ -175,5 +175,9 @@ fn main() {
     draw_outline(&mut img, &poligono5_agujero, morado);
 
     img.save("out.png").expect("No se pudo guardar out.png");
-    println!("out.png generado correctamente ({}x{})", WIDTH, HEIGHT);
+    img.save("out.bmp").expect("No se pudo guardar out.bmp");
+    println!(
+        "out.png y out.bmp generados correctamente ({}x{})",
+        WIDTH, HEIGHT
+    );
 }
